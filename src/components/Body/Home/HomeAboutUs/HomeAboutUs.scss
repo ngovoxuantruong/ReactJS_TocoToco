@@ -1,0 +1,29 @@
+.home__about__us {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.img__banner__about__us img {
+    width: 100%;
+}
+
+.home__about__us--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 4rem;
+    z-index: 2;
+    position: absolute;
+    width: 35%;
+
+    .description {
+        text-align: center;
+        font-family: 'Roboto';
+        color: #504d4d;
+        font-weight: 300;
+        font-size: 1.6rem;
+        margin: 1.6rem 0;
+    }
+}

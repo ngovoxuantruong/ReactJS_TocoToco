@@ -1,0 +1,32 @@
+#header__wrap {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    padding: 1.2rem 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// After 20vh scroll will apply this css to menu
+#header__wrap.scroll__header {
+    background: #282828;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    z-index: 3;
+    animation: slide-down 0.5s;
+}
+
+@keyframes slide-down {
+    0% {
+        top: -20%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}

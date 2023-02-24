@@ -1,0 +1,32 @@
+.popupContainer {
+    position: relative;
+}
+
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(128, 128, 128, 0.5);
+}
+
+.videoPopup {
+    width: 650px;
+    height: 400px;
+    top: calc(50% - 200px);
+    left: calc(50% - 325px);
+    z-index: 5;
+    background: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+.videoCloseIcon {
+    font-size: 1000px;
+    top: 0;
+    color: red;
+}

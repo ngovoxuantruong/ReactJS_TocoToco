@@ -1,0 +1,81 @@
+.slider__bg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.slider__img {
+    width: 100%;
+}
+
+// Swiper button
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+    font-weight: 900;
+    --swiper-navigation-size: 2.8rem;
+}
+
+.swiper-button-prev {
+    left: 10%;
+}
+
+.swiper-button-next {
+    right: 10%;
+}
+
+.slider__mouseScrollDown {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -20%);
+
+    .order__now {
+        height: 4rem;
+        color: white;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        padding: 0 1.5rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        max-width: 18rem;
+        margin: auto;
+        margin-top: 8rem;
+    }
+
+    .scroll__icon {
+        background: url(../../../../assets/icon/ic_scoll.webp) no-repeat center;
+        width: 18px;
+        height: 32px;
+        align-self: center;
+        position: relative;
+        animation: slide-up-down 0.5s infinite alternate;
+        margin: 32px auto 8px;
+    }
+
+    .button__scroll {
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes slide-up-down {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -2rem;
+    }
+}
