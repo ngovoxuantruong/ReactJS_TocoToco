@@ -10,9 +10,10 @@
 
 html {
     font-size: 10px;
-    font-family: 'Roboto', sans-serif;
     font-family: 'Lato', sans-serif;
+    font-family: 'Mulish', sans-serif;
     font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
 
@@ -77,4 +78,50 @@ img {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+/* CSS for pages */
+.page__title {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 3.6rem !important;
+    font-weight: 600;
+    margin: 3.2rem 0 1.6rem 0;
+}
+
+.page__top__banner {
+    height: 300px;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 600;
+    color: #d3b673;
+    letter-spacing: 1.8px;
+    font-family: 'Roboto';
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(./assets/banner/breadcrumb_bg5.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.page__text {
+    font-family: 'Mulish';
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.page__wrap__img {
+    text-align: center;
+    margin: 5rem;
+}
+
+.page__img {
+    width: 80%;
+    margin-bottom: 5rem;
 }

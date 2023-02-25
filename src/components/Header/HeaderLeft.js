@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './HeaderLeft.scss';
 import logo from '../../assets/logo/logo.png';
 import { AiOutlineDown } from 'react-icons/ai';
@@ -13,21 +14,28 @@ const HeaderLeft = () => {
                 <div className="menu__primary">
                     <ul className="menu__list">
                         <li className="menu__item">
-                            <a href="#!" className="menu__item--current">
+                            <NavLink
+                                to={'/'}
+                                className={({ isActive }) => (isActive ? 'menu__item--current' : undefined)}
+                                end
+                            >
                                 Trang chủ
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="menu__item">
-                            <a href="#!">
+                            <NavLink
+                                to={'history'}
+                                className={({ isActive }) => (isActive ? 'menu__item--current' : undefined)}
+                            >
                                 Giới thiệu <AiOutlineDown className="menu__icon" />
-                            </a>
+                            </NavLink>
                             <ul className="sub__menu">
                                 <li className="sub__menu--item">
-                                    <a href="#!">Lịch sử và sứ mệnh</a>
+                                    <NavLink to={'history'}>Lịch sử và sứ mệnh</NavLink>
                                 </li>
 
                                 <li className="sub__menu--item">
-                                    <a href="#!">Thành tựu đạt được</a>
+                                    <NavLink to={'achievement'}>Thành tựu đạt được</NavLink>
                                 </li>
                             </ul>
                         </li>
