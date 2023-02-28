@@ -4,6 +4,7 @@ import Home from './components/Body/Home/Home';
 import HistoryPage from './pages/HistoryPage';
 import Achievement from './pages/AchievementPage';
 import RootLayout from './pages/RootLayout';
+import OrderPage from './pages/OrderPage';
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
             { path: 'achievement', element: <Achievement /> },
         ],
     },
+    { path: 'order', element: <OrderPage /> },
 ]);
 
 const App = () => {

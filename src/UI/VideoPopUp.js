@@ -1,9 +1,6 @@
 import ReactDOM from 'react-dom';
 import classes from './VideoPopUp.module.scss';
-
-const BackDrop = (props) => {
-    return <div className={classes.backdrop} onClick={props.onClose}></div>;
-};
+import BackDrop from './BackDrop';
 
 const Modal = (props) => {
     return <iframe className={classes.videoPopup} src={props.src}></iframe>;

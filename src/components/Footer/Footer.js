@@ -35,11 +35,21 @@ const Footer = () => {
                         <div className="footer__info">Số ĐKKD: 9999999. Ngày cấp: 16/03/2017.</div>
                         <div className="footer__info">Nơi cấp: Sở kế hoạch và Đầu tư Thành phố</div>
                         <div className="footer__info social">
-                            <FaFacebookSquare className="footer__icon" />
-                            <FaInstagram className="footer__icon" />
-                            <FaYoutube className="footer__icon" />
-                            <FaTwitter className="footer__icon" />
-                            <FaGooglePlusG className="footer__icon" />
+                            <a href="#!">
+                                <FaFacebookSquare className="footer__icon" />
+                            </a>
+                            <a href="#!">
+                                <FaInstagram className="footer__icon" />
+                            </a>
+                            <a href="#!">
+                                <FaYoutube className="footer__icon" />
+                            </a>
+                            <a href="#!">
+                                <FaTwitter className="footer__icon" />
+                            </a>
+                            <a href="#!">
+                                <FaGooglePlusG className="footer__icon" />
+                            </a>
                         </div>
                         <div className="footer__info download__app">
                             <a href="#!" target="_blank">

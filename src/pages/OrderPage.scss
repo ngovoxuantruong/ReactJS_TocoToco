@@ -1,0 +1,345 @@
+// ORDER HEADER
+
+.order__header {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 6%);
+    height: 5rem;
+    align-items: center;
+    padding: 0 16px;
+    background: #ffffff;
+    position: relative;
+}
+
+.order__logo {
+    width: 15rem;
+    height: 4rem;
+}
+
+.order__search__input {
+    width: 50rem;
+    border-radius: 30px;
+    border: none;
+    outline: 2px solid #ccc;
+    background: #fbfbfb;
+    height: 3.2rem;
+    font-size: 14px;
+    padding: 0 20px 0 30px;
+    background-image: url(../assets/icon/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 8px 10px;
+    background-size: 14px 14px;
+
+    &:focus-visible {
+        outline: 2px solid #bfb2b2;
+    }
+}
+
+.login__btn {
+    padding: 6px 15px;
+    background: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: normal;
+    border-radius: 25px;
+    white-space: nowrap;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// PAGE ORDER
+
+.page__order {
+    background: #fbfbfb !important;
+    min-height: 100vh;
+}
+
+.order__content {
+    display: flex;
+    padding-top: 8px;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.order__sidebar {
+    width: 30rem;
+    max-width: 25%;
+    margin: 0 16px;
+    color: #282828;
+    background: #ffffff;
+    height: fit-content;
+    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 5%);
+    border-radius: 4px;
+    padding-bottom: 12px;
+}
+
+// ORDER LEFT
+
+.category {
+    &__title {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        border-bottom: 1px solid #f1f1f1;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__list {
+        padding: 0 16px;
+    }
+
+    &__item {
+        display: flex;
+        padding: 8px 0px;
+        justify-content: space-between;
+        border-bottom: 1px solid #f1f1f1;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__name,
+    &__amount {
+        font-size: 1.3rem;
+        color: #8a733f;
+    }
+}
+
+// ORDER CENTER
+
+.order__center {
+    flex-grow: 1;
+    max-width: 50%;
+    padding-bottom: 15rem;
+}
+
+.wrap__product {
+    background: #ffffff;
+    margin-top: 16px;
+}
+
+.category__name__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    padding-bottom: 16px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.category__name--left {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.category__name--right {
+    font-size: 1.5rem;
+}
+
+.list__order__product {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    gap: 1%;
+    height: auto;
+    filter: opacity(1);
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.list__order__product--active {
+    height: 0;
+    filter: opacity(0);
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.order__product {
+    width: 32%;
+    padding: 15px;
+    border-bottom: 1px solid #f8f8f8;
+    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 5%);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &--img {
+        width: 100%;
+    }
+
+    &--name {
+        font-weight: 500;
+        font-size: 1.3rem;
+        padding: 5px 0;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    &--price {
+        display: flex;
+        align-items: flex-end;
+
+        .product__price--sale {
+            font-size: 1.2rem;
+            color: #8a733f;
+            font-weight: 500;
+        }
+
+        .product__price--origin {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            color: #535353;
+            margin-left: 8px;
+        }
+    }
+}
+
+// ORDER RIGHT
+.cart__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f1;
+
+    &--left {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    &--right {
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+}
+
+.cart__list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    margin: 10px 15px;
+    padding: 8px 0;
+}
+
+.cart__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-bottom: 1px solid #f1f1f1;
+
+    &--name {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &--customize {
+        color: #adaeae;
+        margin-bottom: 1rem;
+    }
+
+    &--total {
+        color: #8a733f;
+        font-weight: 500;
+    }
+
+    &--right {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.change__quantity {
+    color: #ffffff;
+    background: #799dd9;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    border: 0;
+    line-height: 2.3rem;
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.amount {
+    font-size: 1.3rem;
+    margin: 0 8px;
+}
+
+.cart__total__amount {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 15px 0;
+
+    .img__toco {
+        height: 35px;
+    }
+
+    .total__amount--text1 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 0 4px;
+    }
+    .total__amount--text2 {
+        font-size: 1.3rem;
+        color: #8a733f;
+    }
+    .total__amount--text3 {
+        font-size: 1.3rem;
+        padding: 0 4px;
+    }
+    .total__amount--text4 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #8a733f;
+    }
+}
+
+.btn__cart {
+    font-size: 1.5rem;
+    height: 3rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d8b979;
+    color: #ffffff;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+// RE-USE STYLE FOR THIS ORDER PAGE
+
+.btn__increase {
+    cursor: pointer;
+    border-radius: 50%;
+    background: #799dd9;
+    color: #ffffff;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 26px;
+    font-weight: 600;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}

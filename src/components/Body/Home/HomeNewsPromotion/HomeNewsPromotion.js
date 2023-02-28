@@ -107,6 +107,7 @@ const HomeNewsPromotion = () => {
                                 <AiOutlinePlayCircle className="home__btn__play" />
                                 <img src={videoBG1} alt="Video background" />
                                 {isShowYoutube1 && (
+                                    /* Render VideoPOPUP */
                                     <VideoPopUp
                                         onClose={closeVideoHandler}
                                         src="https://www.youtube.com/embed/8eHi2B2tQBs"

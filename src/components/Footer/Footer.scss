@@ -45,22 +45,30 @@ footer {
     color: #d3b673;
     font-size: 1.8rem;
     margin-right: 1rem;
+
+    &:hover {
+        color: blanchedalmond;
+    }
 }
 
 .footer__info {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 1.4rem;
 }
 
 .menu__footer--item {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.4rem;
 
     a {
         color: white;
         font-size: 1.3rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.4rem;
+    }
+
+    &:hover a {
+        color: #d3b673;
     }
 }
 

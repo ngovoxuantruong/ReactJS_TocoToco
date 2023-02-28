@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './HeaderLeft.scss';
 import logo from '../../assets/logo/logo.png';
 import { AiOutlineDown } from 'react-icons/ai';
@@ -6,9 +6,9 @@ import { AiOutlineDown } from 'react-icons/ai';
 const HeaderLeft = () => {
     return (
         <div className="left">
-            <a href="" className="logo">
+            <Link to={''} className="logo">
                 <img src={logo} alt="Logo" className="logo__img" />
-            </a>
+            </Link>
 
             <div className="menu">
                 <div className="menu__primary">
@@ -40,9 +40,9 @@ const HeaderLeft = () => {
                             </ul>
                         </li>
                         <li className="menu__item">
-                            <a href="#!">
+                            <NavLink to={'order'}>
                                 Sản phẩm <AiOutlineDown className="menu__icon" />
-                            </a>
+                            </NavLink>
                             <ul className="sub__menu">
                                 <li className="sub__menu--item">
                                     <a href="#!">Instant milktea</a>
