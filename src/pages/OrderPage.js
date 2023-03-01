@@ -3,32 +3,28 @@ import { useState } from 'react';
 import './OrderPage.scss';
 import logo from '../assets/logo/logo.png';
 import glassTea from '../assets/icon/icon-glass-tea.png';
-import { FaAngleDown } from 'react-icons/fa';
-import { FaAngleLeft } from 'react-icons/fa';
 
 import HotProduct from '../components/Product/HotProduct';
 import PopupAddProduct from '../UI/PopupAddProduct';
+import WrapProduct from '../UI/WrapProduct';
+
 import { Link } from 'react-router-dom';
 
-const OrderPage = () => {
-    // Set hide / show category product by onClick event
-    const [isHide, setisHide] = useState(false);
-    const showCategoryHandler = () => {
-        setisHide(!isHide);
-    };
-
+const OrderPage = (props) => {
     const [closeModal, setCloseModal] = useState(false);
     const [isShowProductPopup, setIsShowProductPopup] = useState(false);
 
     const closeAddProductPopupHandler = () => {
-        setIsShowProductPopup(false);
-        setCloseModal(true);
+        setIsShowProductPopup(!isShowProductPopup);
+        setCloseModal(!closeModal);
     };
 
     const openAddProductPopupHandler = () => {
-        setIsShowProductPopup(true);
-        document.documentElement.classList.add('overflow-hidden');
+        setIsShowProductPopup(!isShowProductPopup);
+        setCloseModal(!closeModal);
     };
+
+    closeModal && document.documentElement.classList.add('overflow-hidden');
 
     // Condition to remove html overflow class
     !closeModal && document.documentElement.classList.remove('overflow-hidden');
@@ -83,17 +79,9 @@ const OrderPage = () => {
                     </div>
 
                     <div className="order__center">
-                        <div className="wrap__product">
-                            <div className="category__name__wrap" onClick={showCategoryHandler}>
-                                <p className="category__name--left">Món nổi bật</p>
-                                <p className="category__name--right">{isHide ? <FaAngleLeft /> : <FaAngleDown />}</p>
-                            </div>
-
-                            {/* Render list of category product */}
-                            <div className={`list__order__product ${isHide ? 'list__order__product--active' : null}`}>
-                                <HotProduct onOpen={openAddProductPopupHandler} />
-                            </div>
-                        </div>
+                        <WrapProduct>
+                            <HotProduct onOpen={openAddProductPopupHandler} />
+                        </WrapProduct>
                     </div>
 
                     <div className="order__sidebar sidebar__right">

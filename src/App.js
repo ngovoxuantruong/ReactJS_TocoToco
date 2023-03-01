@@ -5,6 +5,8 @@ import HistoryPage from './pages/HistoryPage';
 import Achievement from './pages/AchievementPage';
 import RootLayout from './pages/RootLayout';
 import OrderPage from './pages/OrderPage';
+import { useContext } from 'react';
+import productContext from './context/ProductContext';
 
 const router = createBrowserRouter([
     {
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
             { path: 'achievement', element: <Achievement /> },
         ],
     },
-    { path: 'order', element: <OrderPage /> },
+    { path: 'order', element: <OrderPage />, children: [{ path: ':productId', element: <OrderPage /> }] },
 ]);
 
 const App = () => {
