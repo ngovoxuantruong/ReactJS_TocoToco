@@ -4,10 +4,12 @@ import './index.scss';
 import App from './App';
 import { ProductProvider } from './context/ProductProvider';
 import reportWebVitals from './reportWebVitals';
+import Responsive from './components/Responsive';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ProductProvider>
+        <Responsive />
         <App />
     </ProductProvider>,
 );

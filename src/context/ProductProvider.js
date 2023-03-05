@@ -10,9 +10,11 @@ import { SuaChuaArr } from '../utils/SuaChuaData';
 const defaultProductValue = {
     product: [],
     totalAmount: 0,
+    toppingValue: [],
 };
 
 const productReducer = (state, action) => {
+    // ADD ACTION
     if (action.type === 'ADD_PRODUCT') {
         const updatedTotalAmount = action.product.salePrice * action.product.amount;
 
@@ -38,6 +40,7 @@ const productReducer = (state, action) => {
         };
     }
 
+    // REMOVE ACTION
     if (action.type === 'REMOVE_PRODUCT') {
         const existingProductIndex = state.product.findIndex((product) => product.id === action.product.id);
 
@@ -62,6 +65,11 @@ const productReducer = (state, action) => {
         };
     }
 
+    // SUBMIT ACTION
+    if (action.type === 'SUBMIT_PRODUCT') {
+        return { product: state.product, totalAmount: state.totalAmount, toppingValue: action.toppingValue };
+    }
+
     if (action.type === 'CLEAR_PRODUCT') {
         return defaultProductValue;
     }
@@ -77,8 +85,12 @@ export const ProductProvider = (props) => {
         });
     };
 
-    const removeProductHandler = (product, numberOfProductAmount) => {
-        dispatchProductActions({ type: 'REMOVE_PRODUCT', product: product, numberOfProductAmount });
+    const removeProductHandler = (product) => {
+        dispatchProductActions({ type: 'REMOVE_PRODUCT', product: product });
+    };
+
+    const submitProductHandler = (toppingValue) => {
+        dispatchProductActions({ type: 'SUBMIT_PRODUCT', toppingValue: toppingValue });
     };
 
     const clearProductHandler = () => {
@@ -88,7 +100,9 @@ export const ProductProvider = (props) => {
     const value = {
         product: productState.product,
         totalAmount: productState.totalAmount,
+        toppingValue: productState.toppingValue,
         addProduct: addProductHandler,
+        submitProduct: submitProductHandler,
         removeProduct: removeProductHandler,
         clearProduct: clearProductHandler,
     };

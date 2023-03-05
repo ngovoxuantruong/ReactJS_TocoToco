@@ -15,7 +15,9 @@ const OrderPageRight = () => {
                     <div className="cart__item">
                         <div className="cart__item--left">
                             <p className="cart__item--name">Trà Đào Dâu Tây Kem Phô Mai(M)</p>
-                            <p className="cart__item--customize">30% đá,70% đường</p>
+                            <p className="cart__item--customize">
+                                Thêm Trân Châu Sương Mai,Thêm Trân Châu Baby,Thêm Trân Châu Hoàng Kim,30% đá,70% đường,
+                            </p>
                             <p className="cart__item--total">28,000đ x 1 = 28,000đ</p>
                         </div>
 
