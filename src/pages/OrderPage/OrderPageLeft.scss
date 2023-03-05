@@ -1,0 +1,38 @@
+// ORDER LEFT
+
+.category {
+    &__title {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        border-bottom: 1px solid #f1f1f1;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__list {
+        padding: 0 16px;
+    }
+
+    &__item {
+        display: flex;
+        padding: 8px 0px;
+        justify-content: space-between;
+        border-bottom: 1px solid #f1f1f1;
+        cursor: pointer;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover,
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__name,
+    &__amount {
+        font-size: 1.3rem;
+        color: #8a733f;
+    }
+}

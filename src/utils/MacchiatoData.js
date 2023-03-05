@@ -1,0 +1,60 @@
+import { v4 as uuidv4 } from 'uuid';
+
+export const MacchiatoArr = [
+    {
+        id: uuidv4(),
+        amount: 1,
+        img: 'https://tocotocotea.com/wp-content/uploads/2022/04/tra%CC%80-xoa%CC%80i-bu%CC%9Bo%CC%9B%CC%89i-ho%CC%82%CC%80ng-kem-pho%CC%82-mai.png',
+        name: 'Trà Xoài Bưởi Hồng Kem Phô Mai',
+        originPrice: '40000',
+        salePrice: '28000',
+    },
+    {
+        id: uuidv4(),
+        amount: 1,
+        img: 'https://tocotocotea.com/wp-content/uploads/2021/12/Hi%CC%80nh-a%CC%89nh-sp-website_1000x1000_choco-ngu%CC%83-co%CC%82%CC%81c-kem-cafe.png',
+        name: 'Choco Ngũ Cốc Kem Cafe',
+        originPrice: '40000',
+        salePrice: '28000',
+    },
+    {
+        id: uuidv4(),
+        amount: 1,
+        img: 'https://tocotocotea.com/wp-content/uploads/2021/12/Hi%CC%80nh-a%CC%89nh-sp-website_1000x1000_ho%CC%82%CC%80ng-tra%CC%80-ngu%CC%83-co%CC%82%CC%81c-kem-cafe.png',
+        name: 'Hồng Trà Ngũ Cốc Kem Cafe',
+        originPrice: '40000',
+        salePrice: '28000',
+    },
+    {
+        id: uuidv4(),
+        amount: 1,
+        img: 'https://tocotocotea.com/wp-content/uploads/2021/01/Dau-Tam-Kem-Pho-Mai-2-copy.jpg',
+        name: 'Dâu Tằm Kem Phô Mai',
+        originPrice: '40000',
+        salePrice: '28000',
+    },
+    {
+        id: uuidv4(),
+        amount: 1,
+        img: 'https://tocotocotea.com/wp-content/uploads/2021/01/Hong-Tra-Kem-Pho-Mai-2-copy.jpg',
+        name: 'Hồng Trà Kem Phô Mai',
+        originPrice: '40000',
+        salePrice: '26000',
+    },
+    {
+        id: uuidv4(),
+        amount: 1,
+        img: 'https://tocotocotea.com/wp-content/uploads/2021/01/Tra-Xanh-Kem-Pho-Mai-2-copy.jpg',
+        name: 'Trà Xanh Kem Phô Mai',
+        originPrice: '40000',
+        salePrice: '26000',
+    },
+    {
+        id: uuidv4(),
+        amount: 1,
+        img: 'https://tocotocotea.com/wp-content/uploads/2021/01/matcha-kem-pho-mai_09b3b54997614aea86d2b61bcd7f548c_73a9e7cd539949718b13b06c5db9522f_grande.png',
+        name: 'Matcha Kem Phô Mai',
+        originPrice: '40000',
+        salePrice: '28000',
+    },
+];

@@ -7,10 +7,11 @@
 .category__name__wrap {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 15px 20px 0 20px;
     padding-bottom: 16px;
     cursor: pointer;
     align-items: center;
+    background: lightgrey;
 }
 
 .category__name--left {
@@ -26,7 +27,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     padding: 0 5px;
     gap: 1%;
     height: auto;

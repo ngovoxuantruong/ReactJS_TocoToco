@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { FaAngleDown } from 'react-icons/fa';
 import { FaAngleLeft } from 'react-icons/fa';
 import './WrapProduct.scss';
@@ -13,9 +14,9 @@ const WrapProduct = (props) => {
 
     return (
         <>
-            <div className="wrap__product">
+            <div className="wrap__product" id={props.id}>
                 <div className="category__name__wrap" onClick={showCategoryHandler}>
-                    <p className="category__name--left">Món nổi bật</p>
+                    <p className="category__name--left">{props.categoryTitle}</p>
                     <p className="category__name--right">{isHide ? <FaAngleLeft /> : <FaAngleDown />}</p>
                 </div>
 

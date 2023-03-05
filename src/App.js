@@ -5,8 +5,6 @@ import HistoryPage from './pages/HistoryPage';
 import Achievement from './pages/AchievementPage';
 import RootLayout from './pages/RootLayout';
 import OrderPage from './pages/OrderPage';
-import { useContext } from 'react';
-import productContext from './context/ProductContext';
 
 const router = createBrowserRouter([
     {
